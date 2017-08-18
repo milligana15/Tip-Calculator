@@ -7,6 +7,45 @@
     tools:context="com.example.alex.tipcalculator.MainActivity">
 
 
+    <TextView
+        android:id="@+id/enter_bill_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="Enter Bill Amount"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/select_tip_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tip_percentage_seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="Select Tip %"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/bill_amt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/calculate"
+        android:layout_alignRight="@+id/calculate"
+        android:layout_below="@+id/enter_bill_amount"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <SeekBar
+        android:id="@+id/tip_percentage_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
     <Button
         android:id="@+id/calculate"
         android:layout_width="225dp"
@@ -16,13 +55,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
-        android:text="TextView" />
+    <!--TODO: Make everything work :)-->'
 
 </RelativeLayout>
