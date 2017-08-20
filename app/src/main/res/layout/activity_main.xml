@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
-        android:text="Enter Bill Amount"
+        android:text="@string/enter_bill_amount"
         android:textSize="25sp" />
 
 
@@ -25,18 +24,19 @@
         android:layout_above="@+id/tip_percentage_seekbar"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
-        android:text="Select Tip %"
+        android:text="@string/select_tip_percentage"
         android:textSize="25sp" />
 
     <EditText
         android:id="@+id/bill_amt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/calculate"
-        android:layout_alignRight="@+id/calculate"
+        android:layout_alignEnd="@+id/calculateButton"
+        android:layout_alignRight="@+id/calculateButton"
         android:layout_below="@+id/enter_bill_amount"
         android:layout_marginTop="27dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="numberDecimal" />
 
     <SeekBar
@@ -47,11 +47,11 @@
         android:layout_centerVertical="true" />
 
     <Button
-        android:id="@+id/calculate"
+        android:id="@+id/calculateButton"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="86dp"
-        android:text="Calculate Tip"
+        android:text="@string/calculate_button_message"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
