@@ -5,44 +5,99 @@
     android:layout_height="match_parent"
     tools:context="com.example.alex.tipcalculator.SingleTipActivity">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="THIS BUTTON ISNT READY YET. GO BACK"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <TextView
+        android:id="@+id/total_bill_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:gravity="center_horizontal"
-        android:text="Tip Percentage"
-        android:textSize="12sp"
-        android:layout_below="@+id/bill_amt"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:gravity="center_horizontal"
         android:text="Total Bill"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/bill_amt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
+        android:gravity="center_horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/total_bill_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Tip Percentage"
+        android:textSize="14sp"
+        android:id="@+id/tip_percentage_label"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/total_bill_label"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/tip_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="TextView"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_below="@+id/tip_percentage_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Total Tip"
+        android:textSize="14sp"
+        android:id="@+id/tip_amount_label"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tip_percentage_label"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tip_amount_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Total Payment"
+        android:textSize="14sp"
+        android:id="@+id/total_payment_label"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tip_amount_label"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/total_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_payment_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
