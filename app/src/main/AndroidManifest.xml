@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SingleTipActivity"></activity>
+        <activity android:name=".SingleTipActivity" />
+        <activity android:name=".SplitBillActivity"></activity>
     </application>
 
 </manifest>

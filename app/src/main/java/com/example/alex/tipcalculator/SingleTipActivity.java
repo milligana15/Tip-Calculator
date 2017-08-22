@@ -32,8 +32,7 @@ public class SingleTipActivity extends AppCompatActivity {
         totalBillDouble = userInput.getDouble("Extra__billAmount");
         tipPercentageDouble = userInput.getInt("Extra__tipPercentage");
 
-        String totalBillDoubleString = String.format(Locale.getDefault(), "$ %.2f", totalBillDouble);
-        totalBill.setText(totalBillDoubleString);
+        totalBill.setText(String.format(Locale.getDefault(), "$ %.2f", totalBillDouble));
         tipPercentage.setText(String.format(Locale.getDefault(), "%% %.0f", tipPercentageDouble));
 
         /*    This is an alternative way to get 2 decimal places in the resulting bill amount, but requires at least API 24

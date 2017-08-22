@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -43,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
@@ -52,8 +53,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        calculateButton = (Button)findViewById(R.id.calculateButton);
-        calculateButton.setOnClickListener(new Button.OnClickListener() {
+        final CheckBox splitBillCheckBox = (CheckBox)findViewById(R.id.split_tip_checkBox);
+        final EditText numberOfPeople = (EditText)findViewById(R.id.number_of_people);
+        numberOfPeople.setVisibility(View.INVISIBLE);
+
+        splitBillCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (splitBillCheckBox.isChecked()) {
+                    numberOfPeople.setVisibility(View.VISIBLE);
+                }
+                else {
+                    numberOfPeople.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        calculateButton = (Button)findViewById(R.id.calculate_button);
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View V) {
                 try {
                     Bundle userInput = new Bundle();
@@ -66,13 +84,26 @@ public class MainActivity extends AppCompatActivity {
                     userInput.putInt("Extra__tipPercentage", seekBar.getProgress());
 
                     intent.putExtras(userInput);
-                    startActivity(intent);
+                    if (!splitBillCheckBox.isChecked()) {
+                        startActivity(intent);
+                    }
+                    else {
+                        int numberOfPeopleInt = Integer.parseInt(numberOfPeople.getText().toString());
+                        userInput.putInt("Extra__numberOfPeople", numberOfPeopleInt);
+
+                        Intent intentSplit = new Intent(MainActivity.this, SplitBillActivity.class);
+                        intentSplit.putExtras(userInput);
+                        startActivity(intentSplit);
+                    }
                 } catch (NumberFormatException e){
-                    Toast.makeText(getApplicationContext(), "WRONG FORMAT FUCK YOU", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Oops! Forgetting something...?", Toast.LENGTH_LONG).show();
                 }
             }
         });
 
     }
+
+
+    //TODO butt-stuff  3
 
 }
