@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SingleTipActivity" />
-        <activity android:name=".SplitBillActivity"></activity>
+        <activity android:name=".SplitBillActivity" />
     </application>
 
 </manifest>
