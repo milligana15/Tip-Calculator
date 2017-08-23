@@ -3,4 +3,24 @@
     <string name="enter_bill_amount">Enter Bill Amount</string>
     <string name="select_tip_percentage">Select Tip %</string>
     <string name="calculate_button_message">Calculate Tip</string>
+    <string name="enter_bill_amt_tip">$$$</string>
+    <string name="split_bill_checkbox">Split Bill</string>
+    <string name="number_of_people_hint">how many people?</string>
+    <string name="tip_percentage_amt">%</string>
+
+    <string name="na">N/A</string>
+
+    <string name="single_bill_amt">Total Bill</string>
+    <string name="single_tip_percentage">Tip Percentage</string>
+    <string name="single_total_tip">Total Tip</string>
+
+    <string name="single_total_payment">Total Payment</string>
+    <string name="split_total_bill">Total Bill</string>
+    <string name="split_number_of_people">Number of People</string>
+    <string name="split_tip_percentage">Tip Percentage</string>
+    <string name="split_tip_amount_each">Tip Amount Each</string>
+    <string name="split_payment_each">Payment Each</string>
+    <string name="split_remainder">Left Over Amount</string>
+    <string name="split_total_payment">Total Payment</string>
+    <string name="split_total_tip">Total Tip</string>
 </resources>

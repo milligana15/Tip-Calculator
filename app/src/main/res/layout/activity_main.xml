@@ -6,87 +6,103 @@
     tools:context="com.example.alex.tipcalculator.MainActivity">
 
 
-    <TextView
-        android:id="@+id/enter_bill_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="@string/enter_bill_amount"
-        android:textSize="25sp" />
-
-    <EditText
-        android:id="@+id/bill_amt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/enter_bill_amount"
-        android:layout_marginTop="15dp"
-        android:ems="5"
-        android:gravity="center"
-        android:hint="$$$"
-        android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/select_tip_percentage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bill_amt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/select_tip_percentage"
-        android:textSize="25sp" />
-
-    <SeekBar
-        android:id="@+id/tip_percentage_seekbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/select_tip_percentage"
-        android:layout_marginTop="15dp"
-        android:max="40"
-        android:progress="20"
-        android:thumb="@drawable/ic_money_60dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tip_percentage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="%"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/tip_percentage_seekbar"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/enter_bill_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/enter_bill_amount"
+            android:textSize="25sp"
+            android:background="@color/colorLight"
+            android:textColor="@color/colorPrimaryDark"/>
 
-    <Button
-        android:id="@+id/calculate_button"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tip_percentage"
-        android:layout_marginTop="40dp"
-        android:text="@string/calculate_button_message"
-        android:layout_centerHorizontal="true" />
+        <EditText
+            android:id="@+id/bill_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ems="5"
+            android:gravity="center"
+            android:hint="@string/enter_bill_amt_tip"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorPrimaryDark"/>
 
-    <CheckBox
-        android:id="@+id/split_tip_checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Split Bill"
-        android:layout_below="@+id/calculate_button"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/select_tip_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/select_tip_percentage"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimaryDark" />
 
-    <EditText
-        android:id="@+id/number_of_people"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/split_tip_checkBox"
-        android:layout_centerHorizontal="true"
-        android:ems="8"
-        android:hint="how many people?"
-        android:inputType="number"
-        android:textAlignment="center" />
+        <SeekBar
+            android:id="@+id/tip_percentage_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:max="40"
+            android:progress="20"
+            android:thumb="@drawable/ic_money_60dp" />
+
+        <TextView
+            android:id="@+id/tip_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tip_percentage_amt"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/calculate_button_message"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_selector"/>
+
+        <CheckBox
+            android:id="@+id/split_tip_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/split_bill_checkbox"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/number_of_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="@string/number_of_people_hint"
+            android:inputType="number"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
