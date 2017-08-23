@@ -39,10 +39,15 @@ public class SplitBillActivity extends AppCompatActivity {
 
         double totalTipEachDouble = (totalBillDouble * ((double)tipPercentageInt / ONE_HUNDRED)) / (double)numberOfPeopleInt;
         double totalPayEachDouble = (totalBillDouble + (totalTipEachDouble * (double)numberOfPeopleInt)) / (double)numberOfPeopleInt;
+        String totalTipEachString = String.format(Locale.getDefault(), "%.2f", totalTipEachDouble);
+        String billEachString = String.format(Locale.getDefault(), "%.2f", totalPayEachDouble);
 
-        tipEachTextView.setText(String.format(Locale.getDefault(), "%.2f", totalTipEachDouble));
-        billEachTextView.setText(String.format(Locale.getDefault(), "%.2f", totalPayEachDouble));
+        tipEachTextView.setText(totalTipEachString);
+        billEachTextView.setText(billEachString);
 
+        // We are parsing from the String to drop the decimal precision to 2 digits
+        totalTipEachDouble = Double.parseDouble(totalTipEachString);
+        totalPayEachDouble = Double.parseDouble(billEachString);
 
         double totalPaymentDouble = totalPayEachDouble * (double) numberOfPeopleInt;
         double totalTipDouble = totalTipEachDouble * (double) numberOfPeopleInt;
